@@ -5,5 +5,6 @@ Version: 0.99
 Date: 2013-12-12
 Author: Christopher Beckham
 Maintainer: <chrispy645@gmail.com>
-Description: Very simple functions to plot all possible scatterplots, boxplots, and histograms in a data frame. Useful for exploratory analysis.
+Description: Very simple functions to plot all possible scatterplots, boxplots,
+    and histograms in a data frame. Useful for exploratory analysis.
 License: WTFPL-2.0
