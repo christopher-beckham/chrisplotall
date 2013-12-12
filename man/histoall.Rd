@@ -1,73 +1,20 @@
 \name{histoall}
 \alias{histoall}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  histoall
-}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
+\title{Create histograms out of all possible quantitative variables in the data.}
 \usage{
 histoall(data, no.export = TRUE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{data}{
-%%     ~~Describe \code{data} here~~
-}
-  \item{no.export}{
-%%     ~~Describe \code{no.export} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
+  \item{data}{the data frame to use}
+
+  \item{no.export}{if this is set to false, then graphs
+  will be exported to png}
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+null
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
+\description{
+Create histograms out of all possible quantitative
+variables in the data.
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (data, no.export = TRUE) 
-{
-    lst <- init(data)
-    quantitatives <- lst[[1]]
-    factors <- lst[[2]]
-    for (i in 1:length(quantitatives)) {
-        if (no.export == FALSE) {
-            png(filename = paste("hist_", paste(i), ".png", sep = ""))
-        }
-        hist(get(quantitatives[i], pos = loansData), xlab = quantitatives[i], 
-            main = quantitatives[i])
-        if (no.export == FALSE) {
-            dev.off()
-        }
-    }
-  }
-}
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
