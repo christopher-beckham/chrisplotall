@@ -58,7 +58,7 @@ histoall <- function(data, no.export=TRUE) {
     if( no.export == FALSE ) {
       png(filename=paste("hist_",paste(i),".png",sep=""))
     }
-    hist( get(quantitatives[i],pos=loansData), xlab=quantitatives[i], main=quantitatives[i] )
+    hist( get(quantitatives[i],pos=data), xlab=quantitatives[i], main=quantitatives[i] )
     if( no.export == FALSE ) {
       dev.off()
     }
@@ -79,7 +79,7 @@ boxplotall <- function(data, no.export=TRUE, ...) {
       if( no.export == FALSE ) {
         png(filename=paste("boxplot",paste(i),"_",paste(j),".png",sep=""))
       }
-      boxplot( get(quantitatives[j],pos=loansData) ~ get(factors[i],pos=loansData),
+      boxplot( get(quantitatives[j],pos=data) ~ get(factors[i],pos=data),
                xlab=factors[i],
                ylab=quantitatives[j],
                ...)
