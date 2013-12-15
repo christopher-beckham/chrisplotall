@@ -1,3 +1,4 @@
 export(boxplotall)
 export(histoall)
 export(scatterall)
+export(scatterall3d)
